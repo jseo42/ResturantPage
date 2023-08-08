@@ -20,8 +20,9 @@ function createHomePage() {
 }
 
 function loadHome() {
-  // main section for from initWeb.js
-  
+  const main = document.querySelector('main');
+  main.textContent = '';
+  main.appendChild(createHomePage());
 }
 
 export default loadHome;
