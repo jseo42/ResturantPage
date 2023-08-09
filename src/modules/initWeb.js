@@ -1,6 +1,6 @@
 import loadHome from "./home";
 import loadContact from "./contact";
-//import menu 
+import loadMenu from "./menu";
 
 // Create Header
 function makeHeader() {
@@ -26,6 +26,9 @@ function makeNavBar(){
   menuBtn.classList.add("nav-btn");
   menuBtn.textContent = "MENU"
 
+  menuBtn.addEventListener('click', () => {
+    loadMenu();
+  });
   // Create Home Button 
   const homeBtn = document.createElement('button');
   homeBtn.classList.add("nav-btn");
