@@ -1,5 +1,5 @@
 import loadHome from "./home";
-//import contact
+import loadContact from "./contact";
 //import menu 
 
 // Create Header
@@ -21,6 +21,11 @@ function makeNavBar(){
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
+  // Create Menu Button
+  const menuBtn = document.createElement('button');
+  menuBtn.classList.add("nav-btn");
+  menuBtn.textContent = "MENU"
+
   // Create Home Button 
   const homeBtn = document.createElement('button');
   homeBtn.classList.add("nav-btn");
@@ -30,18 +35,17 @@ function makeNavBar(){
     loadHome();
   });
 
-  // Create Menu Button
-  const menuBtn = document.createElement('button');
-  menuBtn.classList.add("nav-btn");
-  menuBtn.textContent = "MENU"
-
   // Create Contact Button
   const contactBtn = document.createElement('button');
   contactBtn.classList.add("nav-btn");
   contactBtn.textContent = "CONTACT"
 
-  nav.appendChild(homeBtn);
+  contactBtn.addEventListener('click', () => {
+    loadContact();
+  });
+
   nav.appendChild(menuBtn);
+  nav.appendChild(homeBtn);
   nav.appendChild(contactBtn);
 
 
@@ -54,9 +58,8 @@ function makeMain() {
   main.classList.add('main');
   main.setAttribute('id', 'main');
   return main;
-
-
 }
+
 
 
 function loadWeb() {
@@ -64,5 +67,7 @@ function loadWeb() {
 
   content.appendChild(makeHeader());
   content.appendChild(makeMain());
+
+  loadHome();
 };
 export default loadWeb;
