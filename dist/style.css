@@ -1,5 +1,9 @@
 :root {
-  --font-c: #
+  --font-c: #333131;
+  --font-c-l: #a7a7a7;
+  --header-f: 1.4rem;
+  --background-c: #F4F0DB;
+
 }
 
 *,
@@ -8,5 +12,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--background-c);
+  font-size: 1.5rem;
+  color: var(--font-c);
+  font-family:'Courier New', Courier, monospace
 }
 

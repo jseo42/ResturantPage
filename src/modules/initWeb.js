@@ -36,6 +36,7 @@ function makeNavBar(){
   
   homeBtn.addEventListener('click', () => {
     loadHome();
+  
   });
 
   // Create Contact Button

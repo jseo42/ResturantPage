@@ -1,5 +1,6 @@
 function createHomePage() {
   const home = document.createElement('div');
+  home.classList.add('home-container');
   const header = document.createElement('h1');
   //add class list
   header.textContent = "Awesome Resaurant Name!";

@@ -1,5 +1,6 @@
 function createContactPage() {
   const contact = document.createElement('div');
+  contact.classList.add('contact');
 
   const number = document.createElement('p');
   number.textContent = "xxx.xxx.xxxx"
