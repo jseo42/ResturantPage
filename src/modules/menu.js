@@ -19,16 +19,17 @@ function createMenu() {
 };
 function createPanel() {
   const menuList = [
-    {name: "Food Item", price: '$xx.xx', desc: 'Lorem'},
-    {name: "Food Item", price: '$xx.xx', desc: 'Lorem'},
-    {name: "Food Item", price: '$xx.xx', desc: 'Lorem'},
-    {name: "Food Item", price: '$xx.xx', desc: 'Lorem'},
-    {name: "Food Item", price: '$xx.xx', desc: 'Lorem'},
-    {name: "Food Item", price: '$xx.xx', desc: 'Lorem'}
+    {name: "Food Item #1", price: '$24.99', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+    {name: "Food Item #2", price: '$14.99', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+    {name: "Food Item #3", price: '$32.99', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+    {name: "Food Item #4", price: '$19.99', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+    {name: "Food Item #5", price: '$19.99', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+    {name: "Food Item #6", price: 'MP', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'}
   ]
 
   const dishList = menuList.map(obj => [obj.name, obj.price, obj.desc]);
   let menuItems = document.createElement('div');
+  menuItems.classList.add('menu-container');
 
 
   dishList.forEach(dish => {

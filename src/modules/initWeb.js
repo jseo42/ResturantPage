@@ -9,7 +9,7 @@ function makeHeader() {
   
   const restaurantName = document.createElement('h1');
   restaurantName.classList.add('restaurant-name');
-  restaurantName.textContent = "Awesome Name!";
+  restaurantName.textContent = "JAYBO'S";
 
   header.appendChild(restaurantName);
   header.appendChild(makeNavBar());
@@ -26,7 +26,9 @@ function makeNavBar(){
   menuBtn.classList.add("nav-btn");
   menuBtn.textContent = "MENU"
 
-  menuBtn.addEventListener('click', () => {
+  menuBtn.addEventListener('click', (e) => {
+    if (e.target.classList.contains('active-btn')) return;
+    activeBtn(menuBtn);
     loadMenu();
   });
   // Create Home Button 
@@ -34,7 +36,9 @@ function makeNavBar(){
   homeBtn.classList.add("nav-btn");
   homeBtn.textContent = "HOME"
   
-  homeBtn.addEventListener('click', () => {
+  homeBtn.addEventListener('click', (e) => {
+    if (e.target.classList.contains('active-btn')) return;
+    activeBtn(homeBtn);
     loadHome();
   
   });
@@ -44,7 +48,9 @@ function makeNavBar(){
   contactBtn.classList.add("nav-btn");
   contactBtn.textContent = "CONTACT"
 
-  contactBtn.addEventListener('click', () => {
+  contactBtn.addEventListener('click', (e) => {
+    if (e.target.classList.contains('active-btn')) return;
+    activeBtn(contactBtn);
     loadContact();
   });
 
@@ -64,7 +70,16 @@ function makeMain() {
   return main;
 }
 
-
+function activeBtn(button) {
+  const buttons = document.querySelectorAll('.nav-btn');
+  
+  buttons.forEach(button => {
+    if (button !== this) {
+      button.classList.remove('active-btn');
+    }
+  });
+  button.classList.add('active-btn');
+}
 
 function loadWeb() {
   const content = document.querySelector('#content');

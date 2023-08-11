@@ -1,7 +1,6 @@
 :root {
   --font-c: #333131;
   --font-c-l: #a7a7a7;
-  --header-f: 1.4rem;
   --background-c: #F4F0DB;
 
 }
@@ -12,12 +11,100 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family:'Courier New', Courier, monospace
 }
 
 body {
   background-color: var(--background-c);
   font-size: 1.5rem;
   color: var(--font-c);
-  font-family:'Courier New', Courier, monospace
+  
+}
+
+header {
+  text-align: center;
+}
+
+button { 
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: var(--background-c);
+  border-style: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+
+p {
+  color: var(--font-c);
+}
+
+.main {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.menu-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+p.dish-price {
+  color: var(--font-c);
+  opacity: 0.6;
+}
+
+p.dish-title {
+  font-size: 2rem;
+}
+p.dish-desc {
+  font-size: 1rem;
+}
+
+.contact-title {
+  margin-bottom: 20px;
+}
+
+.address-title {
+  margin-top: 20px;
+}
+
+#content {
+  padding: 30px
+}
+
+
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+
+}
+
+.home-container > img {
+  width: 50%;
+  border-radius: 15px;
+}
+.active-btn {
+  border-bottom: 2px solid #333131;
+  opacity: 0.8;
+}
+
+.nav-btn:hover {
+  position: relative;
+  border-bottom: 2px solid #333131;
+  opacity: 0.8;
+
+}
+
+.nav {
+  display: flex;
 }
 
